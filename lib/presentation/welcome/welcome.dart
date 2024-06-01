@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pizzadev/presentation/welcome/widgets/registration_button.dart';
+import 'package:pizzadev/presentation/welcome/widgets/social_media_button.dart';
 import 'widgets/title_span.dart';
 
 class Welcome extends StatefulWidget {
+  const Welcome({super.key});
+
   @override
   State<Welcome> createState() => _WelcomeState();
 }
@@ -15,19 +20,20 @@ class _WelcomeState extends State<Welcome> {
           width: 375,
           height: 812,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Colors.white),
+          decoration: const BoxDecoration(color: Colors.white), 
           child: Stack(
             children: [
               Positioned(
                 left: -46,
                 top: -25,
                 child: Container(
-                  width: 1118,
+                  width: 1257,
                   height: 838,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("../.."),
+                      image: AssetImage("assets/imagens/imagem-capa.jpg"),
                       fit: BoxFit.fill,
+                      //opacity: 0.2
                     ),
                   ),
                 ),
@@ -38,7 +44,7 @@ class _WelcomeState extends State<Welcome> {
                 child: Container(
                   width: 375,
                   height: 812,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment(-0.00, -1.00),
                       end: Alignment(0, 1),
@@ -50,7 +56,7 @@ class _WelcomeState extends State<Welcome> {
               Positioned(
                 left: 292.50,
                 top: 26,
-                child: Container(
+                child: SizedBox(
                   width: 55,
                   height: 32,
                   child: Stack(
@@ -66,7 +72,7 @@ class _WelcomeState extends State<Welcome> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(27.41),
                             ),
-                            shadows: [
+                            shadows: const [
                               BoxShadow(
                                 color: Color(0x3FD3D1D8),
                                 blurRadius: 35.75,
@@ -77,9 +83,9 @@ class _WelcomeState extends State<Welcome> {
                           ),
                         ),
                       ),
-                      Positioned(
-                        left: 14,
-                        top: 10,
+                      const Positioned(
+                        left: 10,
+                        top: 7,
                         child: SizedBox(
                           width: 35,
                           height: 17,
@@ -99,12 +105,12 @@ class _WelcomeState extends State<Welcome> {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 65,
                 top: 746,
-                child: Container(
+                child: SizedBox(
                   width: 245,
-                  height: 17,
+                  height: 25,
                   child: Stack(
                     children: [
                       Positioned(
@@ -123,7 +129,7 @@ class _WelcomeState extends State<Welcome> {
                         ),
                       ),
                       Positioned(
-                        left: 185,
+                        left: 165,
                         top: 0,
                         child: Text(
                           'Login',
@@ -141,193 +147,29 @@ class _WelcomeState extends State<Welcome> {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 29,
                 top: 668,
-                child: Container(
+                child: SizedBox(
                   width: 315,
                   height: 54,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 315,
-                          height: 54,
-                          decoration: ShapeDecoration(
-                            color: Colors.white.withOpacity(0.20999999344348907),
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(width: 1, color: Colors.white),
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 60,
-                        top: 19,
-                        child: Text(
-                          'Registre-se email ou phone',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Color(0xFFFEFEFE),
-                            fontSize: 17,
-                            fontFamily: 'Sofia Pro',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: RegistrationButton(text: "Registre-se com email ou celular"),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 205,
                 top: 591,
-                child: Container(
-                  width: 139.26,
-                  height: 54,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 139.26,
-                          height: 54,
-                          decoration: ShapeDecoration(
-                            color: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(27.41),
-                            ),
-                            shadows: [
-                              BoxShadow(
-                                color: Color(0x3FD3D1D8),
-                                blurRadius: 35.75,
-                                offset: Offset(17.87, 17.87),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 56,
-                        top: 22,
-                        child: SizedBox(
-                          width: 58,
-                          height: 10,
-                          child: Text(
-                            'GOOGLE',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 13,
-                              fontFamily: 'Sofia Pro',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                              letterSpacing: 0.65,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 12,
-                        top: 13,
-                        child: Container(
-                          width: 28.62,
-                          height: 28.62,
-                          child: Stack(),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                child: SocialMediaButton(text: "GOOGLE", icon: Icon(FontAwesomeIcons.google), iconColor: Colors.red,),
               ),
-              Positioned(
-                left: 30,
+              const Positioned(
+                left: 30, 
                 top: 591,
-                child: Container(
-                  width: 139.26,
-                  height: 54,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 139.26,
-                          height: 54,
-                          decoration: ShapeDecoration(
-                            color: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(27.41),
-                            ),
-                            shadows: [
-                              BoxShadow(
-                                color: Color(0x3FD3D1D8),
-                                blurRadius: 35.75,
-                                offset: Offset(17.87, 17.87),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 49,
-                        top: 22,
-                        child: SizedBox(
-                          width: 75,
-                          height: 10,
-                          child: Text(
-                            'FACEBOOK',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 13,
-                              fontFamily: 'Sofia Pro',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                              letterSpacing: 0.65,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 12,
-                        top: 13,
-                        child: Container(
-                          width: 28.62,
-                          height: 29.70,
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                left: 0,
-                                top: 0,
-                                child: Container(
-                                  width: 28.62,
-                                  height: 28.62,
-                                  decoration: ShapeDecoration(
-                                    color: Color(0xFF1877F2),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(48.08),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                child: SocialMediaButton(text: "FACEBOOK", icon: Icons.facebook, iconColor: Colors.blue,),
               ),
               Positioned(
                 left: 28,
                 top: 160,
-                child: Container(
+                child: SizedBox(
                   width: 311,
                   height: 184,
                   child: Stack(
@@ -343,15 +185,15 @@ class _WelcomeState extends State<Welcome> {
                             children: [
                               TitleSpan(
                                 text: "Bem vindo(a) à",
-                                color: Color(0xFF111719),
-                                height: 0.02,
+                                color: Colors.white,
+                                height: 0.03,
                                 fontSize: 45.0
                               ),
-                              TextSpan(text: "\n"),
+                              const TextSpan(text: "\n"),
                               TitleSpan(
                                 text: "PizzariaDev",
-                                color: Color.fromARGB(204, 254, 115, 76),
-                                height: 0.03,
+                                color: const Color(0xFFFE724C),
+                                height: 0.04,
                                 fontSize: 35.0
                               ),
                             ],
@@ -359,16 +201,16 @@ class _WelcomeState extends State<Welcome> {
                         ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 2,
                         top: 130,
                         child: SizedBox(
                           width: 266,
-                          height: 50,
+                          height: 80,
                           child: Text(
-                              "Sua comida favorita entregue\n em sua residência",
+                              "A melhor da cidade",
                               style: TextStyle(
-                              color: Color(0xFF2F384E),
+                              color: Colors.white,
                               fontSize: 19,
                               fontFamily: 'Sofia Pro',
                               fontWeight: FontWeight.w400,
@@ -384,12 +226,12 @@ class _WelcomeState extends State<Welcome> {
               Positioned(
                 left: 44,
                 top: 557,
-                child: Container(
+                child: SizedBox(
                   width: 293,
                   height: 20,
                   child: Stack(
                     children: [
-                      Positioned(
+                      const Positioned(
                         left: 85,
                         top: 0,
                         child: Text(
@@ -407,7 +249,7 @@ class _WelcomeState extends State<Welcome> {
                       Positioned(
                         left: 0,
                         top: 8,
-                        child: Container(
+                        child: SizedBox(
                           width: 293,
                           child: Stack(
                             children: [
