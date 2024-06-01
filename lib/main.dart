@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'presentation/welcome/welcome.dart';
+import 'package:pizzadev/presentation/splash/splash.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: const [
-          Welcome(),
+          Splash(),
         ]),
       ),
     );

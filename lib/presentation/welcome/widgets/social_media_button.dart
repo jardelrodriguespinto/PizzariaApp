@@ -31,7 +31,7 @@ class _SocialMediaButtonState extends State<SocialMediaButton> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Align(
-              alignment: const Alignment(-0.5, -20.0),
+              alignment: const Alignment(0.5, 20.0),
               child: widget.icon is IconData
                  ? Icon(
                       widget.icon as IconData,
