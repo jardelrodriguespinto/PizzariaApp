@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pizzadev/presentation/welcome/widgets/registration_button.dart';
+import 'package:pizzadev/presentation/welcome/widgets/skip_button.dart';
 import 'package:pizzadev/presentation/welcome/widgets/social_media_button.dart';
 import 'widgets/title_span.dart';
 
@@ -33,77 +34,14 @@ class _WelcomeState extends State<Welcome> {
                     image: DecorationImage(
                       image: AssetImage("assets/imagens/imagem-capa.jpg"),
                       fit: BoxFit.fill,
-                      //opacity: 0.2
                     ),
                   ),
                 ),
               ),
-              Positioned(
-                left: 0,
-                top: 0,
-                child: Container(
-                  width: 375,
-                  height: 812,
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment(-0.00, -1.00),
-                      end: Alignment(0, 1),
-                      colors: [Color(0x00494D62), Color(0xFF191B2E)],
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
+              const Positioned(
                 left: 292.50,
                 top: 26,
-                child: SizedBox(
-                  width: 55,
-                  height: 32,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 55,
-                          height: 32,
-                          decoration: ShapeDecoration(
-                            color: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(27.41),
-                            ),
-                            shadows: const [
-                              BoxShadow(
-                                color: Color(0x3FD3D1D8),
-                                blurRadius: 35.75,
-                                offset: Offset(17.87, 17.87),
-                                spreadRadius: 0,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      const Positioned(
-                        left: 10,
-                        top: 7,
-                        child: SizedBox(
-                          width: 35,
-                          height: 17,
-                          child: Text(
-                            "Pular",
-                            style: TextStyle(
-                              color: Color(0xFFFE724C),
-                              fontSize: 14,
-                              fontFamily: 'Sofia Pro',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                child:SkipButton(text: "Pular")
               ),
               const Positioned(
                 left: 65,
@@ -131,15 +69,18 @@ class _WelcomeState extends State<Welcome> {
                       Positioned(
                         left: 165,
                         top: 0,
-                        child: Text(
-                          'Login',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontFamily: 'Sofia Pro',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
+                        child: Center(
+                          child: Text(
+                            'Login',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontFamily: 'Sofia Pro',
+                              fontWeight: FontWeight.w500,
+                              height: 0,
+                            ),
                           ),
                         ),
                       ),
@@ -159,7 +100,7 @@ class _WelcomeState extends State<Welcome> {
               const Positioned(
                 left: 205,
                 top: 591,
-                child: SocialMediaButton(text: "GOOGLE", icon: Icon(FontAwesomeIcons.google), iconColor: Colors.red,),
+                child: SocialMediaButton(text: "GOOGLE", icon: Icon(FontAwesomeIcons.google, color: Colors.red), iconColor: Colors.red,),
               ),
               const Positioned(
                 left: 30, 
@@ -202,7 +143,6 @@ class _WelcomeState extends State<Welcome> {
                         ),
                       ),
                       const Positioned(
-                        left: 2,
                         top: 130,
                         child: SizedBox(
                           width: 266,
@@ -223,7 +163,7 @@ class _WelcomeState extends State<Welcome> {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 44,
                 top: 557,
                 child: SizedBox(
@@ -231,7 +171,7 @@ class _WelcomeState extends State<Welcome> {
                   height: 20,
                   child: Stack(
                     children: [
-                      const Positioned(
+                      Positioned(
                         left: 85,
                         top: 0,
                         child: Text(
@@ -246,70 +186,7 @@ class _WelcomeState extends State<Welcome> {
                           ),
                         ),
                       ),
-                      Positioned(
-                        left: 0,
-                        top: 8,
-                        child: SizedBox(
-                          width: 293,
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                left: 84,
-                                top: 0,
-                                child: Transform(
-                                  transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(3.14),
-                                  child: Container(
-                                    width: 84,
-                                    decoration: ShapeDecoration(
-                                      shape: RoundedRectangleBorder(
-                                        side: BorderSide(
-                                          width: 1,
-                                          strokeAlign: BorderSide.strokeAlignCenter,
-                                          color: Colors.white.withOpacity(0.5),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                left: 293,
-                                top: 0,
-                                child: Transform(
-                                  transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(3.14),
-                                  child: Container(
-                                    width: 89,
-                                    decoration: ShapeDecoration(
-                                      shape: RoundedRectangleBorder(
-                                        side: BorderSide(
-                                          width: 1,
-                                          strokeAlign: BorderSide.strokeAlignCenter,
-                                          color: Colors.white.withOpacity(0.5),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
                     ],
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 121,
-                top: 791,
-                child: Container(
-                  width: 134,
-                  height: 5,
-                  decoration: ShapeDecoration(
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(100),
-                    ),
                   ),
                 ),
               ),

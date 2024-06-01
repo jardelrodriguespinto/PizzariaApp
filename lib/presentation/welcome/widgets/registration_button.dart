@@ -41,7 +41,9 @@ class _RegistrationButtonState extends State<RegistrationButton> {
               style:
                 const TextStyle(
                   color:Colors.white,
-                  fontFamily: 'Sofia Pro'),
+                  fontFamily: 'Sofia Pro',
+                  fontSize: 17.0
+                ),
             ),
         ),
       );
