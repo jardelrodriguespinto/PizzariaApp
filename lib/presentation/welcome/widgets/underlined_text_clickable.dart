@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pizzadev/presentation/login/login.dart';
 
 class UnderlinedTextClickable extends StatefulWidget {
   final String text;
@@ -16,7 +17,9 @@ class _UnderlinedTextClickableState extends State<UnderlinedTextClickable> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => print("Login"),
+      onTap: () => {
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()))
+      },
       child: Text(
         widget.text,
         textAlign: TextAlign.center,

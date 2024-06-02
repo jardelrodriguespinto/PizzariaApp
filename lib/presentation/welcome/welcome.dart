@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pizzadev/presentation/welcome/widgets/registration_button.dart';
 import 'package:pizzadev/presentation/welcome/widgets/skip_button.dart';
-import 'package:pizzadev/presentation/welcome/widgets/social_media_button.dart';
+import 'package:pizzadev/utils/social_media_button.dart';
 import 'package:pizzadev/presentation/welcome/widgets/underlined_text_clickable.dart';
 import 'widgets/title_span.dart';
 

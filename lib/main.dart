@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pizzadev/presentation/login/login.dart';
 import 'package:pizzadev/presentation/splash/splash.dart';
 
 void main() => runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: const [
-          Splash(),
+          Login(),
         ]),
       ),
     );

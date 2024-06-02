@@ -25,21 +25,31 @@ class _SocialMediaButtonState extends State<SocialMediaButton> {
       width: 150,
       child: TextButton(
         style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(Colors.white),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Align(
-              alignment: const Alignment(0.5, 20.0),
-              child: widget.icon is IconData
-                 ? Icon(
-                      widget.icon as IconData,
-                      color: widget.iconColor?? widget.iconColor,
-                    )
-                  : widget.icon is Icon
-                     ? widget.icon as Icon
-                      : Container(), 
+          side: WidgetStateProperty.all(const BorderSide(
+              style: BorderStyle.solid,
+              color: Colors.black, 
+              width: 0.3, 
+          )),
+        shape: WidgetStateProperty.all(
+        RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30), // Optional: Set border radius if needed
+      ),
+    ),
+    backgroundColor: WidgetStateProperty.all(Colors.white),
+),
+child: Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    Align(
+      alignment: const Alignment(0.5, 20.0),
+      child: widget.icon is IconData
+            ? Icon(
+                widget.icon as IconData,
+                color: widget.iconColor?? widget.iconColor,
+              )
+            : widget.icon is Icon
+                ? widget.icon as Icon
+                : Container(), 
             ),
             const SizedBox(width: 8), 
             Text(
