@@ -140,29 +140,7 @@ class _LoginState extends State<Login> {
                         Positioned(
                           left: 0,
                           top: 0,
-                          child: Container(
-                            width: 248,
-                            height: 60,
-                            decoration: ShapeDecoration(
-                              color: Color(0xFFFE724C),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(28.50),
-                              ),
-                              shadows: [
-                                BoxShadow(
-                                  color: Color(0x287A80BE),
-                                  blurRadius: 40,
-                                  offset: Offset(0, 10),
-                                  spreadRadius: 0,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          left: 76,
-                          top: 25,
-                          child: LoginButton(),
+                          child: LoginButton()
                         ),
                       ],
                     ),
