@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginButton extends StatelessWidget{
-  const LoginButton({super.key});
+class SignupButton extends StatelessWidget{
+  const SignupButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,8 @@ class LoginButton extends StatelessWidget{
           style: ButtonStyle(
             backgroundColor: WidgetStateProperty.all( const Color(0xFFFE724C)),
           ),
-          onPressed: () => print("login"),
-          child: const Text("Login",
+          onPressed: () => print("registrar"),
+          child: const Text("Registrar",
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,

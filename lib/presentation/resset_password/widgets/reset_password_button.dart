@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginButton extends StatelessWidget{
-  const LoginButton({super.key});
+class ResetPasswordButton extends StatelessWidget{
+  const ResetPasswordButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,8 @@ class LoginButton extends StatelessWidget{
           style: ButtonStyle(
             backgroundColor: WidgetStateProperty.all( const Color(0xFFFE724C)),
           ),
-          onPressed: () => print("login"),
-          child: const Text("Login",
+          onPressed: () => print("Enviar nova senha"),
+          child: const Text("Redefinir senha",
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,

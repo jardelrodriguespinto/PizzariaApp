@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pizzadev/presentation/signup/signup.dart';
 
 class RegistrationButton extends StatefulWidget {
 
@@ -35,7 +36,7 @@ class _RegistrationButtonState extends State<RegistrationButton> {
               ),
             ), 
         ),
-        onPressed: () => print("Registrar"),
+        onPressed: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignUp())),
         child: Text(
             widget.text,
               style:

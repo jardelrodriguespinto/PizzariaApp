@@ -48,7 +48,7 @@ class _WelcomeState extends State<Welcome> {
                 const Positioned(
                   left: 292.50,
                   top: 26,
-                  child:SkipButton(text: "Pular")
+                  child: SkipButton(text: "Pular")
                 ),
                 const Positioned(
                   left: 65,
