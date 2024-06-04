@@ -26,7 +26,7 @@ class _WelcomeState extends State<Welcome> {
         children: [
           Container(
             width: 375,
-            height: 812,
+            height: double.maxFinite,
             clipBehavior: Clip.antiAlias,
             decoration: const BoxDecoration(color: Colors.white), 
             child: Stack(

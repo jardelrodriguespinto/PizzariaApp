@@ -23,7 +23,7 @@ class _SignUpState extends State<SignUp> {
         children: [
           Container(
             width: 375,
-            height: 812,
+            height: double.maxFinite,
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(color: Colors.white),
             child: Stack(

@@ -17,7 +17,7 @@ class _RessetPasswordState extends State<RessetPassword> {
         children: [
           Container(
             width: 375,
-            height: 812,
+            height: double.maxFinite,
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(color: Colors.white),
             child: Stack(
@@ -89,15 +89,15 @@ class _RessetPasswordState extends State<RessetPassword> {
                 Positioned(
                   left: 26,
                   top: 234,
-                  child: Flexible(
+                  child: Expanded(
                     child: Text(
-                      'Por favor, insira seu email para\n solicitar a redefinição de senha',
+                      'Por favor, insira seu email \npara solicitar a redefinição de senha',
                       style: TextStyle(
                         color: Color(0xFF9796A1),
                         fontSize: 14,
                         fontFamily: 'Sofia Pro',
                         fontWeight: FontWeight.w400,
-                        height: 0.10,
+                        height: 1.50,
                       ),
                     ),
                   ),

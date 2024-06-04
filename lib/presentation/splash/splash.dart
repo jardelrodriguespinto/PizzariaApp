@@ -31,7 +31,7 @@ class _SplashState extends State<Splash> {
       children: [
         Container(
           width: 375,
-          height: 812,
+          height: double.maxFinite,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(color: Color(0xFFFE724C)),
           child: const Column(

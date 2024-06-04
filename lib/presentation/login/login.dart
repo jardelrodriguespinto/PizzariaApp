@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pizzadev/presentation/resset_password/reset_password.dart';
 import 'package:pizzadev/presentation/signup/signup.dart';
 import 'package:pizzadev/presentation/utils/clickable_text.dart';
 import 'package:pizzadev/presentation/login/widgets/login_button.dart';
@@ -24,7 +25,7 @@ class _LoginState extends State<Login> {
         children: [
           Container(
             width: 375,
-            height: 812,
+            height: double.maxFinite,
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(color: Colors.white),
             child: Stack(
@@ -125,7 +126,7 @@ class _LoginState extends State<Login> {
                 Positioned(
                   left: 128,
                   top: 498,
-                  child: ClickableText(text: "Esqueceu a senha?", redirectPage: SignUp()),
+                  child: ClickableText(text: "Esqueceu a senha?", redirectPage: RessetPassword()),
                 ),
                 Positioned(
                   left: 26,
