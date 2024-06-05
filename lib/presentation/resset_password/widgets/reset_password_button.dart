@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:pizzadev/core/utils/email_validator.dart';
+import 'package:pizzadev/presentation/verification_code/verification_code.dart';
 
 class ResetPasswordButton extends StatelessWidget{
-  const ResetPasswordButton({super.key});
-
+  final String email;
+  
+  const ResetPasswordButton({
+    super.key,
+    required this.email
+  });
+  
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -12,7 +20,6 @@ class ResetPasswordButton extends StatelessWidget{
           style: ButtonStyle(
             backgroundColor: WidgetStateProperty.all( const Color(0xFFFE724C)),
           ),
-          onPressed: () => print("Enviar nova senha"),
           child: const Text("Redefinir senha",
           style: TextStyle(
             color: Colors.white,
@@ -20,7 +27,24 @@ class ResetPasswordButton extends StatelessWidget{
             fontFamily: 'Sofia Pro',
             fontWeight: FontWeight.w600,
             height: 0,
-            letterSpacing: 1.20),),
+            letterSpacing: 1.20),
+            ),
+            onPressed: () {
+              bool isValidEmail = EmailValidator().isValid(email);
+
+              if (isValidEmail) {
+                Navigator.pushReplacement(context, MaterialPageRoute(
+                  builder: (context) => VerificationCode(email: email)));
+              } else {
+                 Fluttertoast.showToast(
+                    msg: "Email inválido, insira um email válido!",
+                    toastLength: Toast.LENGTH_SHORT,
+                    backgroundColor: const Color(0xFFFE724C),
+                    textColor: Colors.white,
+                    fontSize: 13,
+                );
+              }
+            } 
       ),
     );
   }

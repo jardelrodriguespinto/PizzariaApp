@@ -151,7 +151,13 @@ class _SignUpState extends State<SignUp> {
                   child: Container(
                     width: 324.01,
                     height: 93,
-                    child: TextInput(labelText: "Nome Completo", hintText: "Insira seu nome")
+                    child: TextInput(
+                              labelText: "Nome Completo",
+                              hintText: "Insira seu nome",
+                              onTextChanged: (value) {
+                                setState(() => print("todo"));
+                              }
+                            )
                   ),
                 ),
                 Positioned(
@@ -252,7 +258,12 @@ class _SignUpState extends State<SignUp> {
                   child: Container(
                     width: 324.01,
                     height: 93,
-                    child:TextInput(labelText: "Email", hintText: "Insira seu email")
+                    child:TextInput(
+                            labelText: "Email",
+                            hintText: "Insira seu email",
+                            onTextChanged: (value) {
+                            setState(() => print("todo"));
+                      })
                   ),
                 ),
               ],

@@ -152,7 +152,13 @@ class _LoginState extends State<Login> {
                   child: Container(
                     width: 324.01,
                     height: 93,
-                    child: TextInput(labelText: "Email", hintText: "Insira um email",)
+                    child: TextInput(
+                              labelText: "Email",
+                              hintText: "Insira um email",
+                              onTextChanged: (value) {
+                              setState(() => print("todo"));
+                            }
+                          )
                   ),
                 ),
                 Positioned(

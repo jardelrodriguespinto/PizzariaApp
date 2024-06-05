@@ -10,6 +10,8 @@ class RessetPassword extends StatefulWidget {
 }
 
 class _RessetPasswordState extends State<RessetPassword> {
+  String _email = '';
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -108,7 +110,13 @@ class _RessetPasswordState extends State<RessetPassword> {
                   child: Container(
                     width: 324.01,
                     height: 65,
-                    child: TextInput(labelText: "Email", hintText: "Insira seu email") 
+                    child: TextInput(
+                      labelText: "Email",
+                      hintText: "Insira seu email",
+                      onTextChanged: (value) {
+                        setState(() => _email = value);
+                      }
+                    )
                   ),
                 ),
                 Positioned(
@@ -117,7 +125,7 @@ class _RessetPasswordState extends State<RessetPassword> {
                   child: Container(
                     width: 248,
                     height: 60,
-                    child: ResetPasswordButton()
+                    child: ResetPasswordButton(email: _email,)
                   ),
                 ),
               ],
