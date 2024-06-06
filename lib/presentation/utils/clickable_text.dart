@@ -26,7 +26,7 @@ class _ClickableTextState extends State<ClickableText> {
         textAlign: TextAlign.center,
         style: const TextStyle(
           color: Color(0xFFFE724C),
-          fontSize: 14,
+          fontSize: 16,
           fontFamily: 'Sofia Pro',
           fontWeight: FontWeight.w400,
           height: 0,

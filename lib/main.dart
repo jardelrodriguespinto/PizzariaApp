@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: const [
-          Login()
+          VerificationCode(email: "email")
         ]),
       ),
     );

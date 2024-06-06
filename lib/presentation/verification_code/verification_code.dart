@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pizzadev/presentation/signup/signup.dart';
 import 'package:pizzadev/presentation/utils/clickable_text.dart';
+import 'package:pizzadev/presentation/verification_code/widgets/otp_component.dart';
 
 class VerificationCode extends StatefulWidget {
   final String? email;
@@ -40,13 +41,13 @@ class _VerificationCodeState extends State<VerificationCode> {
                   left: 26,
                   top: 180,
                   child: SizedBox(
-                    width: 296,
+                    width: 500,
                     height: 40,
                     child: Text(
-                      'Vefification Code',
+                      'Código de Verificação',
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 36.41,
+                        fontSize: 31.41,
                         fontFamily: 'Sofia Pro',
                         fontWeight: FontWeight.w600,
                         height: 0.03,
@@ -110,188 +111,10 @@ class _VerificationCodeState extends State<VerificationCode> {
                 Positioned(
                   left: 27,
                   top: 301,
-                  child: Container(
-                    width: 320,
-                    height: 65,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          child: Container(
-                            width: 65,
-                            height: 65,
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                  left: 0,
-                                  top: 0,
-                                  child: Container(
-                                    width: 65,
-                                    height: 65,
-                                    decoration: ShapeDecoration(
-                                      color: Colors.white,
-                                      shape: RoundedRectangleBorder(
-                                        side: BorderSide(width: 1, color: Color(0xFFEEEEEE)),
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      shadows: [
-                                        BoxShadow(
-                                          color: Color(0x3FE8E8E8),
-                                          blurRadius: 45,
-                                          offset: Offset(15, 20),
-                                          spreadRadius: 0,
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  left: 25,
-                                  top: 22,
-                                  child: SizedBox(
-                                    width: 16,
-                                    height: 20,
-                                    child: Text(
-                                      '5',
-                                      style: TextStyle(
-                                        color: Color(0xFFFE724C),
-                                        fontSize: 27.20,
-                                        fontFamily: 'Sofia Pro',
-                                        fontWeight: FontWeight.w400,
-                                        height: 0,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          left: 85,
-                          top: 0,
-                          child: Container(
-                            width: 65,
-                            height: 65,
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                  left: 0,
-                                  top: 0,
-                                  child: Container(
-                                    width: 65,
-                                    height: 65,
-                                    decoration: ShapeDecoration(
-                                      color: Colors.white,
-                                      shape: RoundedRectangleBorder(
-                                        side: BorderSide(width: 1, color: Color(0xFFEEEEEE)),
-                                        borderRadius: BorderRadius.circular(10),
-                                      ),
-                                      shadows: [
-                                        BoxShadow(
-                                          color: Color(0x3FE8E8E8),
-                                          blurRadius: 45,
-                                          offset: Offset(15, 20),
-                                          spreadRadius: 0,
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  left: 25,
-                                  top: 22,
-                                  child: SizedBox(
-                                    width: 16,
-                                    height: 20,
-                                    child: Text(
-                                      '3',
-                                      style: TextStyle(
-                                        color: Color(0xFFFE724C),
-                                        fontSize: 27.20,
-                                        fontFamily: 'Sofia Pro',
-                                        fontWeight: FontWeight.w500,
-                                        height: 0,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          left: 170,
-                          top: 0,
-                          child: Container(
-                            width: 65,
-                            height: 65,
-                            decoration: ShapeDecoration(
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                side: BorderSide(width: 1, color: Color(0xFFFE724C)),
-                                borderRadius: BorderRadius.circular(14),
-                              ),
-                              shadows: [
-                                BoxShadow(
-                                  color: Color(0x3FD3D1D8),
-                                  blurRadius: 30,
-                                  offset: Offset(15, 15),
-                                  spreadRadius: 0,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          left: 255,
-                          top: 0,
-                          child: Container(
-                            width: 65,
-                            height: 65,
-                            decoration: ShapeDecoration(
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                side: BorderSide(width: 1, color: Color(0xFFEEEEEE)),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              shadows: [
-                                BoxShadow(
-                                  color: Color(0x3FE8E8E8),
-                                  blurRadius: 45,
-                                  offset: Offset(15, 20),
-                                  spreadRadius: 0,
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          left: 197,
-                          top: 21,
-                          child: Transform(
-                            transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(1.57),
-                            child: Container(
-                              width: 22,
-                              decoration: ShapeDecoration(
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                    width: 1.50,
-                                    strokeAlign: BorderSide.strokeAlignCenter,
-                                    color: Color(0xFFFFC529),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  child: OtpComponent()//todo implementação
                 ),
                 Positioned(
-                  left: 54,
+                  left: 72,
                   top: 398,
                   child: Row(
                       children: [
@@ -299,7 +122,7 @@ class _VerificationCodeState extends State<VerificationCode> {
                           "Não recebi o código! ",
                           style: TextStyle(
                           color: Color(0xFF5B5B5E),
-                          fontSize: 14,
+                          fontSize: 16,
                           fontFamily: 'Sofia Pro',
                           fontWeight: FontWeight.w400,
                           height: 0,
