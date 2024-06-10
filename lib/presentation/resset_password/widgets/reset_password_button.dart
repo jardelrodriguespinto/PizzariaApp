@@ -34,7 +34,7 @@ class ResetPasswordButton extends StatelessWidget{
 
               if (isValidEmail) {
                 Navigator.pushReplacement(context, MaterialPageRoute(
-                  builder: (context) => VerificationCode(email: email)));
+                  builder: (context) => VerificationCode(email: email, phoneNumber: null,)));
               } else {
                  Fluttertoast.showToast(
                     msg: "Email inválido, insira um email válido!",

@@ -27,23 +27,19 @@ class _SplashState extends State<Splash> {
   }
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 375,
-          height: double.maxFinite,
-          clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFFFE724C)),
-          child: const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              LogoWidget(),
-              SizedBox(width: 50.0,),
-            ],
-          ),
-        ),
-      ],
+    return Container(
+      width: 375,
+      height: double.maxFinite,
+      clipBehavior: Clip.antiAlias,
+      decoration: const BoxDecoration(color: Color(0xFFFE724C)),
+      child: const Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          LogoWidget(),
+          SizedBox(width: 50.0,),
+        ],
+      ),
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class OtpComponent extends StatefulWidget {
-  const OtpComponent({Key? key}) : super(key: key);
+  const OtpComponent({super.key});
 
   @override
   State<OtpComponent> createState() => _OtpComponentState();
@@ -15,11 +15,11 @@ class _OtpComponentState extends State<OtpComponent> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         _buildTextField(),
-        SizedBox(width: 12), 
+        const SizedBox(width: 12), 
         _buildTextField(),
-        SizedBox(width: 12), 
+        const SizedBox(width: 12), 
         _buildTextField(),
-        SizedBox(width: 12), 
+        const SizedBox(width: 12), 
         _buildTextField(),
       ],
     );
@@ -33,17 +33,17 @@ class _OtpComponentState extends State<OtpComponent> {
       decoration: BoxDecoration(
         color: Colors.white, 
         borderRadius: BorderRadius.circular(10), 
-        border: Border.all(color: Color(0xFFFE724C)),
+        border: Border.all(color: const Color(0xFFFE724C)),
       ),
       child: TextFormField(
         cursorColor: Colors.amber,
         onSaved: (pin1) {},
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           hintText: "0",
           contentPadding: EdgeInsets.zero,
           border: InputBorder.none,
         ),
-        style: TextStyle(
+        style: const TextStyle(
           color: Color(0xFFFE724C),
           fontSize: 25
         ),

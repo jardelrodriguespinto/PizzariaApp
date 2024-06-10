@@ -5,9 +5,9 @@ class UnderlinedTextClickable extends StatefulWidget {
   final String text;
 
   const UnderlinedTextClickable({
-    Key? key, 
+    super.key, 
     required this.text,
-  }) : super(key: key); 
+  }); 
     
   @override
   State<UnderlinedTextClickable> createState() => _UnderlinedTextClickableState();
@@ -18,7 +18,7 @@ class _UnderlinedTextClickableState extends State<UnderlinedTextClickable> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => {
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()))
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Login()))
       },
       child: Text(
         widget.text,

@@ -2,7 +2,7 @@ class EmailValidator {
   bool isValid(String email){
     RegExp regex = RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
     
-    if (email == null || email.isEmpty) {
+    if (email.isEmpty) {
       return false;
     }
     

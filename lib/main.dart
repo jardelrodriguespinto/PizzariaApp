@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pizzadev/presentation/login/login.dart';
 import 'package:pizzadev/presentation/phone_registration/phone_registration.dart';
-import 'package:pizzadev/presentation/resset_password/reset_password.dart';
+import 'package:pizzadev/presentation/signup/signup.dart';
 import 'package:pizzadev/presentation/splash/splash.dart';
-import 'package:pizzadev/presentation/verification_code/verification_code.dart';
 
 void main() => runApp(const MyApp());
 
@@ -20,7 +18,9 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: ListView(children: const [
           PhoneRegistration()
-        ]),
+        ],
+        physics: NeverScrollableScrollPhysics(),
+        ),
       ),
     );
   }

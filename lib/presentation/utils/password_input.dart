@@ -24,7 +24,7 @@ class _PasswordInputState extends State<PasswordInput> {
         style: const TextStyle(color: Colors.black87),
         obscureText: !_passwordVisible,
         decoration: InputDecoration(
-        labelStyle: TextStyle(color: Colors.black87),
+        labelStyle: const TextStyle(color: Colors.black87),
         labelText: 'Senha',
         hintText: 'Insira sua senha',
         suffixIcon: IconButton(

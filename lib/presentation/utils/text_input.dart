@@ -41,7 +41,7 @@ class _TextInputState extends State<TextInput> {
       style: const TextStyle(color: Colors.black87),
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
-        labelStyle: TextStyle(color: Colors.black87),
+        labelStyle: const TextStyle(color: Colors.black87),
         labelText: widget.labelText,
         hintText: widget.hintText,
       ),

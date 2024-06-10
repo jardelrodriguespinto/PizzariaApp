@@ -34,7 +34,7 @@ class PhoneRegistrationButton extends StatelessWidget {
 
               if (isValidPhoneNumber) {
                 Navigator.pushReplacement(context, MaterialPageRoute(
-                  builder: (context) => VerificationCode(email: phoneNumber)));
+                  builder: (context) => VerificationCode(email: null, phoneNumber: phoneNumber)));
               } else {
                  Fluttertoast.showToast(
                     msg: "Número de celular inválido, insira um número válido!",
