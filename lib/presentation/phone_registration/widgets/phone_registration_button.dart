@@ -3,14 +3,19 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:pizzadev/core/utils/phone_number_validator.dart';
 import 'package:pizzadev/presentation/verification_code/verification_code.dart';
 
-class PhoneRegistrationButton extends StatelessWidget {
+class PhoneRegistrationButton extends StatefulWidget {
   final String phoneNumber;
   
   const PhoneRegistrationButton({
     super.key,
     required this.phoneNumber
   });
-  
+
+  @override
+  State<PhoneRegistrationButton> createState() => _PhoneRegistrationButtonState();
+}
+
+class _PhoneRegistrationButtonState extends State<PhoneRegistrationButton> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -29,12 +34,12 @@ class PhoneRegistrationButton extends StatelessWidget {
             height: 0,
             letterSpacing: 1.20),
             ),
-            onPressed: () {
-              bool isValidPhoneNumber = PhoneNumberValidator().isValid(phoneNumber);
+            onPressed: () async {
+              bool isValidPhoneNumber = PhoneNumberValidator().isValid(widget.phoneNumber);
 
               if (isValidPhoneNumber) {
                 Navigator.pushReplacement(context, MaterialPageRoute(
-                  builder: (context) => VerificationCode(email: null, phoneNumber: phoneNumber)));
+                  builder: (context) => VerificationCode(email: null, phoneNumber: widget.phoneNumber)));
               } else {
                  Fluttertoast.showToast(
                     msg: "Número de celular inválido, insira um número válido!",

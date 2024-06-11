@@ -36,30 +36,30 @@ class _PhoneInputState extends State<PhoneInput> {
   }
 
   void _onChanged() {
-    String value = _controller.text;
-    
-    if (value.length >= 2 && !value.contains('(')) {
-      setState(() => _controller.text = formatPhoneNumber(value));
+  String value = _controller.text;
+  String newText = formatPhoneNumber(value);
+
+  if (newText != value) {
+    _controller.value = TextEditingValue(
+      text: newText,
+      selection: TextSelection.collapsed(offset: newText.length),
+    );
+  }
+}
+
+  String formatPhoneNumber(String input) {
+    String digitsOnly = input.replaceAll(RegExp(r'\D'), '');
+
+    if (digitsOnly.length <= 2) {
+      return digitsOnly; 
+    } else if (digitsOnly.length <= 7) {
+      return "(${digitsOnly.substring(0, 2)}) ${digitsOnly.substring(2)}"; 
+    } else if (digitsOnly.length <= 11) {
+      return "(${digitsOnly.substring(0, 2)}) ${digitsOnly.substring(2, 3)} ${digitsOnly.substring(3, 7)}-${digitsOnly.substring(7)}"; 
+    } else {
+      return "(${digitsOnly.substring(0, 2)}) ${digitsOnly.substring(2, 3)} ${digitsOnly.substring(3, 7)}-${digitsOnly.substring(7, 11)}"; 
     }
   }
- 
-  String formatPhoneNumber(String input) { // TODO AJUSTAR CODIGO
-    RegExp pattern = RegExp(r'^(\d{2})(\d{2})(\d{4})(\d{4})$');
-    RegExpMatch? matchResult = pattern.firstMatch(input);
-
-    if (matchResult!= null) {
-      Match match = matchResult; 
-      String areaCode = match.group(1)!;
-      String prefix = match.group(2)!;
-      String middleDigits = match.group(3)!;
-      String lastDigits = match.group(4)!;
-
-      return "(${areaCode}) $prefix $middleDigits-$lastDigits";
-    }
-
-    return input;
-  }
-
 
   @override
   Widget build(BuildContext context) {
